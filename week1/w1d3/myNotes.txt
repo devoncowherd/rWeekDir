@@ -1,0 +1,66 @@
+myNotes 04/28/2022
+
+---
+
+Linked Lists, ListNodes, and Best Practices
+-
+
+---
+
+- You're adding nodes together to make a chain of nodes
+- This dynamically grows
+- Stack (like a stack of plates) add/remove/etc
+- Below are collection frameworks!
+- Array lists add/remove/get indices in a sequential way
+- Queues are first-in-first-out (FIFO)
+- Stacks are last-in-first-out
+- Interfaces are below!
+- Sets are collections of unique elements
+- Maps are collections of unique keys 
+- Avoid ambiguitiy (such as declaring two variables of the same name in the same class) where possible
+- Garbage collection is when an item is removed from the program. In Java, garbage collection can happen automatically
+
+---
+
+Generics
+-
+
+---
+
+- All objects are descended from the Object class (methods and all)
+- You can downcast from Object to any Object type you've created
+- ListNode can be anything
+- ListNode<T> example
+- Before you create a list, you need to tell the list what to hold. The list can hold objects, so you want to use general purpose nodes unless you need a strict type, in which case use the type
+- LinkedList<Object> someList = new LinkedList<Object>();
+- ArrayList<Word> someList = new ArrayList<>();
+- Tommorrow: Hashset, Treeset, Hashmap, Treemap
+- Wrapper Classes wrap primitive types inside of an object
+- ArrayLists are expecting a reference (at minimum) to an object, so you may not declare it with a primitive type
+- ^That is why wrapper classes are useful
+- Wrapper classes perform autoboxing/autounboxing
+
+---
+
+Unix
+-
+
+---
+
+- cd
+- mkdir
+- ls/dir
+- cp/copy
+- echo/touch 
+
+---
+
+Random
+-
+
+---
+
+- Strings share a pool of memory
+>String b = "Truck";
+String a = "Truck";
+a and b share the same memory address
