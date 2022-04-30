@@ -1,7 +1,6 @@
 package src.main.java;
 
 import java.util.Scanner;
-import java.io.*;
 import java.util.LinkedList;
 
 public class Main 
@@ -31,22 +30,23 @@ public class Main
 
     public static LinkedList remove(LinkedList list, String userInput)
     {
-        for(int x = 0; x < list.size(); x++ )
+        if(list.contains(userInput))
         {
-            if(list.contains(userInput))
+            for(int x = 0; x < list.size(); x++ )
             {
-                if(userInput.equals(list.get(x)))
+                if(list.contains(userInput))
                 {
-                    list.remove(list.get(x));
-                }
+                    if(userInput.equals(list.get(x)))
+                    {
+                        list.remove(list.get(x));
+                    }
+                }           
             }
-            else
-            {
-                System.out.println("Element not found. Here's the current list:" + list);
-            }
+        }   
+        else
+        {
+            System.out.println("\nElement not found. Here's the current list:\n" + list);
         }
-            
-       
         return list;
     }
 
@@ -58,13 +58,12 @@ public class Main
         LinkedList<String> strings = new LinkedList();
         String listName = "What kind of list do you need?";
         String userInput;
-        String enter = "";
         String instruct = "Instructions:\n\n1: Add Element\n2: Remove Element\n3: Show Entire list\n4: Exit Program\n";
         boolean run = true;
         String which = "Which element do you want to remove?";
 
         System.out.println(listName);
-        listName = "\n" + scan.nextLine() + "List:\n";
+        listName = "\n" + scan.nextLine() + " List:\n";
 
         while(run)
         {
@@ -82,6 +81,7 @@ public class Main
                     System.out.println(listName + strings);
                     break;
                 case "2":
+                    System.out.println(which);
                     userInput = scan.nextLine();
                     strings = remove(strings, userInput);
                     System.out.println(listName + strings);
@@ -91,6 +91,8 @@ public class Main
                     break;
                 case "4":
                     run = false;
+                    scan.close();
+                    break;
                 default:
                     System.out.println(instruct);
             }
