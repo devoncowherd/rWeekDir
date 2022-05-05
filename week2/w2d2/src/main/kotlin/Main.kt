@@ -68,11 +68,12 @@ fun main(args : Array<String>)
                 var current = (n - 1) + (n - 2)
                 return current;
         }
-
+        println(0);
+        println(1);
         for(i in 1..100)
         {
                 n = doFib(i);
-                if(n > 1 && n <= 100)
+                if(n >= 0 && n <= 100)
                 {
                         println(n);
                 }
@@ -96,7 +97,7 @@ fun main(args : Array<String>)
         println("\nLet's find the largest of the following: 23.4, -34.5, 50.0, 33.5, 55.5, 43.7, 5.7, -66.5");
         val largestArray = arrayOf(23.4, -34.5, 50.0, 33.5, 55.5, 43.7, 5.7, -66.5)
 
-        var temp = 0.00;
+        var temp = largestArray[0];
         for(num in largestArray)
         {
                 println("\t...scanning");
@@ -113,7 +114,7 @@ fun main(args : Array<String>)
         var avgArray = arrayOf(45.3, 67.5, -45.6, 20.34, 33.0, 45.6);
 
         var elements = 0.00;
-        var sum = 0.00;
+        var sum = avgArray[0];
         for(i in avgArray)
         {
                 ++elements;
