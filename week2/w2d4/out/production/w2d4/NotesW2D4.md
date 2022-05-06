@@ -50,9 +50,3 @@
 // some exit condition
 `
 - This function calls itself until there is an exit condition met
-
----
-### Trees
-
----
-

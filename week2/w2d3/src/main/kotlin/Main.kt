@@ -1,5 +1,7 @@
 import java.time.LocalDate;
 import java.util.Scanner;
+import kotlin.math.*;
+
 //Kotlin automatically imports kotlin.math
 
 fun squiggle()
@@ -17,6 +19,8 @@ fun main(args : Array<String>)
     var scan = Scanner(System.`in`);
 
     println("...Script Loaded!");
+
+    squiggle();
     //Question 1: Find if 2 rectangles overlap one another
     //(rect1x1,rect1y1) // (rect1x2,rect1y2)
     /*
@@ -31,10 +35,81 @@ fun main(args : Array<String>)
      */
 
 
+    println("...checking if those rectangles overlap...");
+    var rect1 = Rectangle(3,7,5,1);
+    var rect2 = Rectangle(4,8,4,0);
+
+    var overlap = rect1.checkCollision(rect1,rect2);
+
+    if(overlap)
+    {
+        println("The rectangles overlap!")
+    }
+    else
+    {
+        println("There was no overlap between those rectangles!");
+    }
+
+    println();
+
+    squiggle();
     //Question 2: Check if 2 date ranges overlap //StartDate1, EndDate1 // StartDate2, EndDate2
     // Lines overlap one other (a line can be represented using 2 point)
     //L1 - (x1,y1) //(x2,y2)
     //L2 - (x1,y1) (x2,y2)
+    println("Let's check if you've got any schedule conflicts coming up.")
+    fun checkDate(start : Int, end : Int)
+    {
+        var conflict : Boolean;
+        println("Start: ${start}");
+        println("End: ${end}");
+        var conflictStart1 = 9;
+        var conflictEnd1 = 12;
+        var conflictStart2 =  25;
+        var conflictEnd2 = 37;
+        var conflictStart3 = 120;
+        var conflictEnd3 = 125;
+        var conflictYear = 2022;
+
+        if(start < end)
+        {
+            for(i in start..end)
+            {
+                if( i >= conflictStart1 && i <= conflictEnd1)
+                {
+                    println("...conflict detected on day ${i}! Beep-Boop 🤖");
+                    break;
+                }
+                else if( i >= conflictStart2 && i <= conflictEnd2)
+                {
+                    println("...conflict detected on day ${i}! Beep-Boop 🤖");
+                    break;
+                }
+                else if( i >= conflictStart3 && i <= conflictEnd3)
+                {
+                    println("...conflict detected on day ${i}! Beep-Boop 🤖");
+                    break;
+                }
+                else
+                {
+                    println("...searching");
+                }
+            }
+        }
+        else
+        {
+            println("Wait... You're a time traveler...?there's nothing to worry about here then!!");
+        }
+
+    }
+
+    println("What's the start date:");
+    var start = scan.nextInt();
+    println("What's the end date:");
+    var end = scan.nextInt();
+
+    checkDate(start, end);
+
     squiggle();
     //Question 3: Program to sort a list of items using for loop
 
@@ -70,7 +145,7 @@ fun main(args : Array<String>)
 
     for(i in 0..unsortedArr.size - 1)
     {
-        print("${unsortedArr[i]} ")
+        print("${unsortedArr[i]} ");
     }
 
 
@@ -108,22 +183,34 @@ fun main(args : Array<String>)
     {
         print("${m2[i]} ");
     }
+    print("\t<--- new row from multiplying the top two rows");
 
     squiggle();
     //Question 7: Convert decimal to binary using functions
     println();
     println("Input a number to convert to binary:");
 
-    var userInput = scan.nextLine().toDouble();
+    var jerkReader = Scanner(System.`in`);
+    var put = jerkReader.nextLine().toDouble();
     var binarize = {num : Double ->
-        println(num.toBits());
+        println("...Oops! I spilled my bits: ${num.toBits()}... Here's the right one: ${Integer.toBinaryString(num.toInt())}");
     }
 
-    binarize(userInput);
+    binarize(put);
 
 
-
+    squiggle();
     //Question 8: Find the distance between two points on a map (not linearly [Latitude/Longitude]
+    println("Here's the 2D distance between the points (5,6) and (25,-33)...!")
+    fun getPointDistance(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Double
+    {
+        var formula = sqrt((x1 - x2).toDouble().pow(2) + (y1 - y2).toDouble().pow(2));
+        return formula;
+    }
+
+    println("...Got it : ${getPointDistance(5,6,25,-33).toInt().toDouble()}");
+
+
     //Google uses Djick's algorithm (node search) and a*
     //haversine formula (great-circle distance)
 
@@ -148,38 +235,7 @@ fun main(args : Array<String>)
     //------------------------------------------
 
     //Question 9: Take input of a String and spellcheck it against a dictionary (suggest a word)
-    fun spellCheck(x : String) : Boolean
-    {
-            val cat = "cat";
-            val dog = "dog";
-            val bat = "rat";
-            if (x.length != 3) {
-                println("That word was too long!");
-            }
 
-            else
-            {
-                    if(x.lowercase().contains("ca") && x!= "cat")
-                    {
-                           println("Did you mean cat?")
-                    }
-            }
-    }
-
-    var run = true;
-
-
-    while(run)
-    {
-        println("I'm thinking of an animal species that is 3 letters long, furry, and a quadruped. What am I?");
-        var input: String = scan.nextLine();
-        if(input == "cat" || input == "rat" || input == "dog")
-        {
-            println("You guessed it!");
-            break;
-        }
-
-    }
     /*
     //higher order one
 
