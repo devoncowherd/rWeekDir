@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DineshCalculator</string>
+    <string name="num_display">0</string>
+</resources>

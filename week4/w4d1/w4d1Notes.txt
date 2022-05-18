@@ -1,0 +1,53 @@
+---
+
+Notes W4D1
+-
+
+---
+
+### MVVM
+
+---
+
+- Meta Note: We will never use a local JSON irl
+- User Interface layer is DISTINCT FROM Data layer SEPERATION OF CONCERN
+- This allows us to store the data in the proper layer
+- View (XML/UI) -> View Model -> Repository -> LocalData/Cloud
+	- Works backwards for separation of layes
+
+---
+
+### Best Practices
+
+---
+
+- Be aware of Memory Complexity/Time Complexity 
+- Static code analysis and refactoring is necessary among teams
+- SonarQube ! Perfect for refactoring / Static Code Analysis
+- ProGuard - Coding style and architecture from previous authors / remove unnecessary lines of code
+	- Design for the most common use case
+	- Be aware of your previous design choices, and remain consistent 
+	- Use common naming standards for Kotlin along with CamelCasing and Caps Classes (Pascal Case)
+- Developers.android.com for best practices
+- Avoid deep-level layouts
+- Universal Design! Be aware of accessibility features such as colorblind modes, left-handed modes, one-handed modes,etc
+- Bring in only the dependencies you need
+	-  TAKE NOTE OF GRADLE DEPENDENCIES FOR QC
+- Include or inflate views you need
+- Android Debug Bridge
+- Debugging
+	- Always consider if the user's internet is going slow when using asynchronous web functions
+	- Let the user know if it's our fault or their device's fault
+- App security is number 1!!!!!!! Provide the top-most security
+	- Encryption
+	- Sign In
+	- 2FA
+	- Special Characters using Escape keys
+	- Be aware of SQL injection by using an escape sequence
+
+- Structure
+	- Always have a copyright header in your code at the top
+	- File annotations
+	- Package statements
+	- import statements
+	- top-level declarations (functions, properties, etc)

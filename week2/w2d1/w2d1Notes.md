@@ -21,7 +21,7 @@ Conditional Statements
 
 - Flow Control
 - If/Else
-- Dependin on the conditions, different decisions will be made
+- Depending on the conditions, different decisions will be made
 - Loops (ex. You need the alarm every morning - until your schedule changes, at which point you will exit the loop)
 - While(alive){eat()}
 - while(), for(), do{}while(), if(), else()

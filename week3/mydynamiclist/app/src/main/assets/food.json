@@ -1,0 +1,88 @@
+{
+  "foods" : [
+    {
+      "name" : "Veggie Burger",
+      "image" : "https://picsum.photos/200/300",
+      "description" : "a multi-layered dish usually consisting of a patty, two slices of bread, tomatoes, and filler objects",
+      "category" : "Lunch"
+    },
+    {
+      "name" : "Pasta",
+      "image" : "https://picsum.photos/200/300",
+      "description" : "Food Item",
+      "category" : "Dinner"
+    },
+    {
+      "name" : "Tacos",
+      "image" : "https://picsum.photos/200/300",
+      "description" : "Food Item",
+      "category" : "Lunch"
+    },
+    {
+      "name" : "Corn Flakes",
+      "image" : "https://picsum.photos/200/300",
+      "description" : "Food Item",
+      "category" : "Breakfast"
+    },
+    {
+      "name" : "Pho",
+      "image" : "https://picsum.photos/200/300",
+      "description" : "Food Item",
+      "category" : "Dinner"
+    },
+    {
+      "name" : "Cheesy Fries",
+      "image" : "https://picsum.photos/200/300",
+      "description" : "Food Item",
+      "category" : "Dinner"
+    },
+    {
+      "name" : "Salad",
+      "image" : "https://picsum.photos/200/300",
+      "description" : "Food Item",
+      "category" : "Lunch"
+    },
+    {
+      "name" : "Fried Rice",
+      "image" : "https://picsum.photos/200/300",
+      "description" : "Food Item",
+      "category" : "Dinner"
+    },
+    {
+      "name" : "Steamed Buns",
+      "image" : "https://picsum.photos/200/300",
+      "description" : "Food Item",
+      "category" : "Dinner"
+    },
+    {
+      "name" : "Veggie Burrito",
+      "image" : "Food Item",
+      "description" : "https://picsum.photos/200/300",
+      "category" : "Dinner"
+    },
+    {
+      "name" : "Rocky Road Ice Cream",
+      "image" : "https://picsum.photos/200/300",
+      "description" : "Food Item",
+      "category" : "Dessert"
+    },
+    {
+      "name" : "Chips",
+      "image" : "https://picsum.photos/200/300",
+      "description" : "Food Item",
+      "category" : "Snack"
+    },
+    {
+      "name" : "Salsa",
+      "image" : "https://picsum.photos/200/300",
+      "description" : "Food Item",
+      "category" : "Condiment"
+    },
+    {
+      "name" : "Freeze-Dried Fruit",
+      "image" : "https://picsum.photos/200/300",
+      "description" : "Food Item",
+      "category" : "Space Food"
+    }
+  ]
+}

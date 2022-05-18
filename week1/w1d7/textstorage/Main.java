@@ -8,20 +8,40 @@ public class Main
         System.out.println("...Script Loaded!");
     
         FileScanner scan = new FileScanner();
+        FileGenerator gen = new FileGenerator();
         String userInput;    
         String print;
         File currentFile;
+        boolean run = true;
 
-        FileGenerator gen = new FileGenerator();
+       
+        while(run)
+        {
+            gen.prompt();
+            for(int x = 0; x < 50; x++)
+            {
+                System.out.print("-");
+            }
+            System.out.println("");
 
-        print = gen.listFiles();
-        System.out.println(print);
+            userInput = gen.getInput();
+            switch(userInput)
+            {
 
-        gen.makeFile();
-        print = gen.listFiles();
-
-        System.out.println(print);        
-
+                case "1":
+                    gen.writeFile();
+                    break;
+                case "2":
+                    System.out.println("\n...this part of the program wasn't built yet\n");
+                    break;
+                case "3":
+                    run = false;
+                    break;
+                default:
+                    System.out.println("\nNo valid inputs received.\n");
+                    break;
+            }
+        }
     }
 
 }

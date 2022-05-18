@@ -1,0 +1,20 @@
+{
+  "recipe" : [
+    "title" : "veggie stir fry",
+    "url" : "https://...",
+    "servings" : "1 per lb",
+    "ingredients" :
+    [
+      "1 cup white rice",
+      "3 cups kale",
+      "1/2 cup mushrooms"
+    ],
+    "seasonings" :
+    [
+      "turmeric",
+      "salt",
+      "garlic powder",
+      "olive oil",
+      "onion powder"]
+  ]
+}
