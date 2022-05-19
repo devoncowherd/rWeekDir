@@ -1,0 +1,25 @@
+# Notes W4D3
+
+---
+
+### Room Database
+
+---
+
+Structure:
+
+Room Database (communicates with app)
+	Data Access Objects (communicates with app)
+		Entities (communicates with app)
+Rest of APP
+
+--- 
+
+6 Points of Databases:
+
+- Holder Class
+- Abstract and extend Room DB
+- @Database annotation
+- Contains a function that returns DAO
+- Must be a Singleton
+- Database Builder
