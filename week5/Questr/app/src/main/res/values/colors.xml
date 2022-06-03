@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="crimson">#DC143C</color>
     <color name="jade">#00A36C</color>
+    <color name="amber">#FFBF00</color>
+    <color name="dark_grey">#a9a9a9</color>
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav"
@@ -7,25 +8,40 @@
 
     <fragment
         android:id="@+id/currentListFragment"
-        android:name="com.example.questr.CurrentListFragment"
+        android:name="com.example.questr.fragments.CurrentListFragment"
         android:label="Quests"
         tools:layout="@layout/fragment_current_list" >
         <action
             android:id="@+id/action_currentListFragment_to_addListFragment"
             app:destination="@id/addListFragment" />
+        <action
+            android:id="@+id/action_currentListFragment_to_updateQuest"
+            app:destination="@id/updateQuest" />
     </fragment>
     <fragment
         android:id="@+id/completedListFragment"
-        android:name="com.example.questr.CompletedListFragment"
+        android:name="com.example.questr.fragments.CompletedListFragment"
         android:label="Completed"
         tools:layout="@layout/fragment_completed_list" />
     <fragment
         android:id="@+id/addListFragment"
-        android:name="com.example.questr.AddListFragment"
+        android:name="com.example.questr.fragments.AddListFragment"
         android:label="New Quest"
         tools:layout="@layout/fragment_add_list" >
         <action
             android:id="@+id/action_addListFragment_to_currentListFragment"
             app:destination="@id/currentListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateQuest"
+        android:name="com.example.questr.fragments.UpdateListFragment"
+        android:label="fragment_update_quest"
+        tools:layout="@layout/fragment_update_quest" >
+        <action
+            android:id="@+id/action_updateQuest_to_currentListFragment"
+            app:destination="@id/currentListFragment" />
+        <argument
+            android:name="currentQuest"
+            app:argType="com.example.questr.data.Quests" />
     </fragment>
 </navigation>
